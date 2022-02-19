@@ -1,0 +1,42 @@
+grant codebase "file:./printserver.jar" {
+   permission javax.security.auth.AuthPermission "modifyPrincipals";
+   permission javax.security.auth.AuthPermission "createLoginContext.PrintServer";
+   permission javax.security.auth.AuthPermission "doAsPrivileged";
+};
+
+grant codebase "file:./printserver.jar", Principal printserver.principal.PrintServerPrincipal "alice" {
+	permission printserver.PrintServerPermission "print";
+	permission printserver.PrintServerPermission "queue";
+	permission printserver.PrintServerPermission "topQueue";
+	permission printserver.PrintServerPermission "start";
+	permission printserver.PrintServerPermission "stop";
+	permission printserver.PrintServerPermission "reset";
+	permission printserver.PrintServerPermission "status";	
+	permission printserver.PrintServerPermission "readConfig";
+	permission printserver.PrintServerPermission "setConfig";
+};
+
+grant codebase "file:./printserver.jar", Principal printserver.principal.PrintServerPrincipal "bart" {
+	permission printserver.PrintServerPermission "start";
+	permission printserver.PrintServerPermission "stop";
+	permission printserver.PrintServerPermission "reset";
+	permission printserver.PrintServerPermission "readConfig";
+	permission printserver.PrintServerPermission "setConfig";
+};
+
+grant codebase "file:./printserver.jar", Principal printserver.principal.PrintServerPrincipal "cecile" {
+	permission printserver.PrintServerPermission "topQueue";
+	permission printserver.PrintServerPermission "reset";
+};
+
+grant codebase "file:./printserver.jar", Principal printserver.principal.PrintServerPrincipal "dirk" {
+	permission printserver.PrintServerPermission "print";
+	permission printserver.PrintServerPermission "queue";
+	permission printserver.PrintServerPermission "status";
+};
+
+grant codebase "file:./printserver.jar", Principal printserver.principal.PrintServerPrincipal "erica" {
+	permission printserver.PrintServerPermission "print";
+	permission printserver.PrintServerPermission "queue";
+	permission printserver.PrintServerPermission "status";
+};
