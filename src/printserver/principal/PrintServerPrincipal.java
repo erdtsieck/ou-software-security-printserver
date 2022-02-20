@@ -43,7 +43,7 @@ import java.security.Principal;
 
 /**
  * <p> This class implements the <code>Principal</code> interface
- * and represents a Sample user.
+ * and represents a user.
  *
  * <p> Principals such as this <code>PrintServerPrincipal</code>
  * may be associated with a particular <code>Subject</code>
@@ -63,11 +63,11 @@ public class PrintServerPrincipal implements Principal, java.io.Serializable {
     private String name;
 
     /**
-     * Create a PrintServerPrincipal with a Sample username.
+     * Create a PrintServerPrincipal with a username.
      *
      * <p>
      *
-     * @param name the Sample username for this user.
+     * @param name the username for this user.
      *
      * @exception NullPointerException if the <code>name</code>
      *                  is <code>null</code>.
@@ -80,11 +80,11 @@ public class PrintServerPrincipal implements Principal, java.io.Serializable {
     }
 
     /**
-     * Return the Sample username for this <code>PrintServerPrincipal</code>.
+     * Return the username for this <code>PrintServerPrincipal</code>.
      *
      * <p>
      *
-     * @return the Sample username for this <code>PrintServerPrincipal</code>
+     * @return the username for this <code>PrintServerPrincipal</code>
      */
     public String getName() {
         return name;
